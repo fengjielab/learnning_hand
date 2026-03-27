@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+
+handvenv/
+.venv/
+venv/
+
+MUJOCO_LOG.TXT
+
+.DS_Store
