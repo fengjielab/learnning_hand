@@ -8,7 +8,7 @@ import forcedimension_core.dhd as dhd
 import mujoco
 import mujoco.viewer
 import time
-from scipy.spatial.transform import Rotation as R
+import ctypes
 
 print("=" * 60)
 print("Omega.7 控制 Mujoco 机器人测试")
@@ -25,7 +25,7 @@ print(f"✅ Omega.7 已连接！设备 ID: {result}")
 # 初始化变量
 pos = np.zeros(3)
 matrix = np.zeros((3, 3))
-gripper_angle = 0.0
+gripper_pointer = ctypes.pointer(ctypes.c_double(0.0))
 
 # ==================== 创建 Mujoco 环境 ====================
 print("\n正在创建 Mujoco 环境...")
@@ -145,7 +145,8 @@ try:
         while viewer.is_running():
             # 读取 Omega.7 状态
             dhd.getPositionAndOrientationFrame(pos, matrix)
-            dhd.getGripperAngleDeg(gripper_angle)
+            dhd.getGripperAngleDeg(gripper_pointer)
+            gripper_angle = gripper_pointer.contents.value
             
             # 计算目标关节角度（逆运动学简化版）
             # 这里使用简化的映射，实际应用中需要完整的逆运动学

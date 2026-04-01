@@ -1,6 +1,6 @@
 #!/bin/bash
 # Force Dimension SDK 自动安装脚本
-# 使用方法: bash install_sdk.sh
+# 使用方法: bash scripts/01_install_force_dimension_sdk.sh
 
 set -e
 

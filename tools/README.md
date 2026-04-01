@@ -26,17 +26,17 @@
 ```bash
 cd teletest_forcedimension
 source handvenv/bin/activate
-python3 utils_20260327_104135/device_manager.py check
+python3 tools/device_manager.py check
 ```
 
 **完整释放设备（推荐）：**
 ```bash
-python3 utils_20260327_104135/device_manager.py full
+python3 tools/device_manager.py full
 ```
 
 **仅终止占用进程：**
 ```bash
-python3 utils_20260327_104135/device_manager.py kill
+python3 tools/device_manager.py kill
 ```
 
 ---
@@ -85,8 +85,8 @@ finally:
 
 ```bash
 # Omega.7 设备管理
-alias omega-check='cd /home/mfj/teletest_forcedimension && source handvenv/bin/activate && python3 utils_20260327_104135/device_manager.py check'
-alias omega-release='cd /home/mfj/teletest_forcedimension && source handvenv/bin/activate && python3 utils_20260327_104135/device_manager.py full'
+alias omega-check='cd /home/mfj/teletest_forcedimension && source handvenv/bin/activate && python3 tools/device_manager.py check'
+alias omega-release='cd /home/mfj/teletest_forcedimension && source handvenv/bin/activate && python3 tools/device_manager.py full'
 ```
 
 然后运行：
@@ -105,7 +105,7 @@ omega-release   # 释放设备
 
 **解决：**
 ```bash
-python3 utils_20260327_104135/device_manager.py full
+python3 tools/device_manager.py full
 ```
 
 ### 错误：`AttributeError: module 'forcedimension_core.dhd' has no attribute 'error'`

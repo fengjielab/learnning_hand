@@ -151,12 +151,12 @@ sudo usermod -a -G plugdev $USER
 ## 文件清单
 
 本配置目录包含：
-- `Omega7_udev 配置指南.md` - 本配置文件
+- `03_Omega7_udev权限配置.md` - 本配置文件
 - （可选）执行脚本
 
 ---
 
 ## 参考资料
 
-- [VirtualBox USB 故障排除指南](../VirtualBox_USB 故障排除指南.md)
-- [Omega.7 环境配置指南](../SETUP_GUIDE.md)
+- [Windows 到 VirtualBox USB 排错](./02_Windows到VirtualBox_USB排错.md)
+- [Linux 宿主机环境配置指南](./01_Linux宿主机环境配置指南.md)

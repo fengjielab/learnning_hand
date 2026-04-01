@@ -1,6 +1,6 @@
 #!/bin/bash
 # Omega.7 环境配置脚本
-# 使用方法: sudo bash setup_omega7.sh
+# 使用方法: sudo bash scripts/02_setup_omega7_environment.sh
 
 set -e  # 遇到错误立即退出
 
