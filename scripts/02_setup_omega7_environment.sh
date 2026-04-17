@@ -103,13 +103,24 @@ echo "------------------------------------------"
 echo "说明: 安装 forcedimension-core (SDK 的 Python 绑定) 和 numpy"
 echo ""
 
+PROJECT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+REQUIREMENTS_FILE="$PROJECT_DIR/requirements.txt"
+
 # 检查是否在虚拟环境中
 if [ -n "$VIRTUAL_ENV" ]; then
     echo "检测到虚拟环境: $VIRTUAL_ENV"
-    pip install forcedimension-core numpy
+    if [ -f "$REQUIREMENTS_FILE" ]; then
+        pip install -r "$REQUIREMENTS_FILE"
+    else
+        pip install forcedimension-core numpy
+    fi
 else
     echo "未检测到虚拟环境，使用系统 Python"
-    pip3 install forcedimension-core numpy
+    if [ -f "$REQUIREMENTS_FILE" ]; then
+        pip3 install -r "$REQUIREMENTS_FILE"
+    else
+        pip3 install forcedimension-core numpy
+    fi
 fi
 
 echo -e "${GREEN}✓ Python 依赖安装完成${NC}"

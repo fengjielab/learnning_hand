@@ -30,8 +30,9 @@
 1. [00_项目总览.md](/home/mfj/teletest_forcedimension/docs/00_项目总览.md)
 2. [01_Linux宿主机环境配置指南.md](/home/mfj/teletest_forcedimension/docs/01_Linux宿主机环境配置指南.md)
 3. 如果你还在 Windows + VirtualBox 环境，再看 [02_Windows到VirtualBox_USB排错.md](/home/mfj/teletest_forcedimension/docs/02_Windows到VirtualBox_USB排错.md)
-4. 运行测试前，先看 [tools/README.md](/home/mfj/teletest_forcedimension/tools/README.md)
-5. 再按 `tests/` 里的编号顺序跑脚本
+4. 如果你要在新电脑上重建环境，再看 [09_新机器初始化步骤.md](/home/mfj/teletest_forcedimension/docs/09_新机器初始化步骤.md)
+5. 运行测试前，先看 [tools/README.md](/home/mfj/teletest_forcedimension/tools/README.md)
+6. 再按 `tests/` 里的编号顺序跑脚本
 
 ## 最常用的文件
 
@@ -45,3 +46,8 @@
   Mujoco 联动测试
 - [device_manager.py](/home/mfj/teletest_forcedimension/tools/device_manager.py)
   检查设备、释放设备
+
+## 环境重建
+
+- [requirements.txt](/home/mfj/teletest_forcedimension/requirements.txt)
+  新机器上安装 Python 依赖的入口

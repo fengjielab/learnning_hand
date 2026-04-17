@@ -1,0 +1,9 @@
+# Core Omega.7 Python dependencies
+forcedimension-core
+numpy
+
+# Used by the Mujoco integration test
+mujoco
+
+# Kept here because the project summary/environment docs mention it
+scipy
